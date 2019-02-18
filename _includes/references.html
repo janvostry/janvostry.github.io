@@ -1,0 +1,16 @@
+{%- comment -%}AÁBCČDĎEÉĚFGHChIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ{%- endcomment -%}
+<h3 class="mb-5">Reference</h3>
+<div class="card-deck">
+	{% for reference in site.data.references %}
+		<article class="card mb-4 overflow-hidden">
+			<img class="card-img-top" src="/assets/reference/{{ reference.image }}" alt="{{ reference.title }}"/>
+			<h4 class="card-header">{{ reference.title }}</h4>
+			<div class="card-body">
+				<p class="card-text">{{ reference.desc }}</p>
+				<p class="card-text"><small class="text-muted">{{ reference.tech }}</small></p>
+			</div>
+			<div class="card-footer text-muted">{{ reference.date }}</div>
+		</article>
+		{% include _breakpoint.html %}
+	{% endfor %}
+</div>

@@ -1,0 +1,14 @@
+{%- comment -%}AÁBCČDĎEÉĚFGHChIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ{%- endcomment -%}
+<h3 class="mb-5">Zkušenosti</h3>
+<div class="card-deck">
+	{% for experience in site.data.experiences %}
+		<article class="card mb-4">
+			<h4 class="card-header">{{ experience.title }}</h4>
+			<div class="card-body">
+				<p class="card-text">{{ experience.type }}</p>
+			</div>
+			<div class="card-footer text-muted">{{ experience.from }} - {{ experience.to }}</div>
+		</article>
+		{% include _breakpoint.html %}
+	{% endfor %}
+</div>

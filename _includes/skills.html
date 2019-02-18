@@ -1,0 +1,21 @@
+{%- comment -%}AÁBCČDĎEÉĚFGHChIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ{%- endcomment -%}
+<h3 class="mb-5">Dovednosti</h3>
+<div class="card-deck">
+	{% for skill in site.data.skills %}
+		<article class="card mb-4">
+			<h4 class="card-header">{{ skill.title }}</h4>
+			<div class="card-body">
+				{% for item in skill.high %}
+					<span class="badge badge-primary">{{ item }}</span>
+				{% endfor %}
+				{% for item in skill.medium %}
+					<span class="badge badge-secondary">{{ item }}</span>
+				{% endfor %}
+				{% for item in skill.low %}
+					<span class="badge badge-light">{{ item }}</span>
+				{% endfor %}
+			</div>
+		</article>
+		{% include _breakpoint.html %}
+	{% endfor %}
+</div>

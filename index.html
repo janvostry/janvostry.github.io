@@ -1,1 +1,51 @@
-Hello, World!
+---
+layout: default
+title:  Jan Vostrý
+---
+<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="navbar">
+	<a class="navbar-brand" href="#index">jan.vostry.name</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navlist">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse justify-content-end" id="navlist">
+		<ul class="navbar-nav nav-pills">
+			<li class="nav-item"><a class="nav-link" href="#about">O Mně</a></li>
+			<li class="nav-item"><a class="nav-link" href="#skills">Dovednosti</a></li>
+			<li class="nav-item"><a class="nav-link" href="#experiences">Zkušenosti</a></li>
+			<li class="nav-item"><a class="nav-link" href="#references">Reference</a></li>
+			<li class="nav-item"><a class="nav-link" href="#contacts">Kontakty</a></li>
+		</ul>
+	</div>
+</nav>
+<header id="index" class="d-table">
+	<div class="d-table-cell align-middle">
+		<div class="card text-center">
+			<h1 class="card-header">Jan Vostrý</h1>
+			<h2 class="card-body">programátor</h2>
+		</div>
+	</div>
+</header>
+<div class="container">
+	<section id="about">
+	{% include about.html %}
+	</section>
+	<section id="skills">
+	{% include skills.html %}
+	</section>
+	<section id="experiences">
+	{% include experiences.html %}
+	</section>
+	<section id="references">
+	{% include references.html %}
+	</section>
+	<section id="contacts">
+	{% include contacts.html %}
+	</section>
+</div>
+<footer>
+	<div class="card text-center">
+		<div class="card-body">
+			Copyright &copy; 2019 Jan Vostrý
+		</div>
+	</div>
+</footer>
